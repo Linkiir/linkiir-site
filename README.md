@@ -1,37 +1,35 @@
 # Linkiir website
 
-Extract the complete ZIP and open index.html. GitHub Pages deployment uses dist/.
+The website is at the root of this ZIP. Extract the complete archive and upload its contents to the repository root. There is no dist folder or redirect through a build directory.
 
-## Current revision
+## Hosting
 
-- Restored “Move healthcare data forward” and adjusted logo alignment.
-- Kept the constrained desktop hero and muted green palette.
-- Product runtime animation shows one automatic documented flow, with pause and step controls. Reduced-motion preferences are respected.
-- Removed performance statistics and connector CSV export. Catalogue search and filters remain.
-- Replaced the original local video with the supplied Loom overview. Playback needs internet access and Loom availability.
-- Product screenshots appear one at a time in a sliding frame with arrows, keyboard and swipe navigation.
-- Simplified the AI page and added an animated Linkiir Agent concept for patient-flow charts, laboratory activity and CMIO reporting. Agent remains coming soon, with synthetic preview data clearly identified. Customer control and current Grid AI approvals remain explicit.
+The included GitHub Pages workflow publishes the repository root. Hosted links use clean directory URLs, including /product/, /ai/, /integrations/, /resources/ and /sandbox/. The advertising landing pages are /hl7-fhir-integration/ and /healthcare-integration-engine/. Each route contains an index.html file, which the host serves as its default document without including the filename in navigation.
 
-## Checks
+Open the root index.html to browse locally. The local-browsing helper restores explicit file links only for file:// browsing. Hosted navigation preserves clean URLs, query parameters and anchors.
 
-Local links and anchors, JavaScript syntax, CSS brace checks, carousel interactions and Agent animation progression were checked. Browser visual verification remains blocked by the saved local-preview permission. No production deployment or form submission was made.
+robots.txt allows all crawlers, including AI crawlers. Individual crawler behavior and indexing are controlled by the crawler provider.
 
-## High-resolution product captures
+## Current content
 
-Replaced the original low-resolution screenshots with the supplied September 18 PNG captures. The homepage uses Workflow Builder. The Product carousel contains six distinct views: Workflow Builder, Dashboard, Projects, Scripting, Monitor and Message logs. The duplicate tall dashboard capture is omitted. Images remain unchanged, with their original pixel dimensions; the carousel displays one uncropped image at a time and caps its width at 1000 CSS pixels.
+The homepage uses the supplied Loom overview. Five high-resolution product screenshots appear in a single-frame carousel. Grid can run with or without configurable AI. Agent analytics are explicitly marked as a coming-soon concept with synthetic data. The interface-count claim is user-supplied: 1,000+ interfaces running today. Performance benchmark claims and connector CSV export have been removed.
 
-## Sandbox and customer-control update
+The 15-day sandbox form uses the existing enquiry service and requests team follow-up; it does not automatically provision access. Landing-page identifiers are included in resulting enquiries. No live form submissions, advertising campaigns or production deployments were performed.
 
-Added a 15-day sandbox request page using the existing Web3Forms inbox configuration. This requests follow-up, not automated provisioning; no live submission was sent. Header and footer access links and the old downloads route lead to this page. Removed the GitHub release link from Resources. Added an enterprise evaluation checklist for workflow fit, controls and recovery.
+## Verification
 
-Removed Projects from the five-image carousel. Replaced the evidence band with the user-supplied statement that 1,000+ interfaces are running on Grid today. Home and AI explain operation without AI and customer-selected models and endpoints; externally configured providers are explicitly distinguished from self-hosted processing. Local links, anchors and JavaScript syntax were checked.
+Local route, asset and anchor checks and JavaScript syntax checks pass. Browser visual verification remains blocked by the saved local-preview permission.
 
-## Google Ads landing pages
+## Mobile refinements
 
-Two focused pages are included at dist/hl7-fhir-integration/index.html and dist/healthcare-integration-engine/index.html. Both use the actual Workflow Builder image and link to the sandbox request and technical demo forms. A fixed campaign identifier carries the originating landing page into form submissions. This is basic lead-source attribution, not a configured Google Ads campaign or a verified conversion-tracking setup. No ad campaigns or site deployment were performed.
+The mobile header hides the sandbox CTA below 900px. Dense grids, forms, evidence sections and callouts stack into one column; buttons wrap, headings scale and carousel captions use natural height. Detailed charts and tables scroll within their own panels. Product flow nodes stack their text on narrow phones. Existing in-page sandbox access remains available. These changes have code-level verification; rendered mobile preview remains unavailable.
 
-Updated the homepage, both advertising landing pages and the engine FAQ to the user-supplied claim: 1,000+ interfaces running today.
+## Search visibility
 
-## Clean hosted URLs
+Added descriptive search titles, self-referencing clean canonical URLs, Open Graph metadata, Organization/WebPage structured data, a Grid SoftwareApplication description and sitemap.xml. robots.txt points crawlers to the sitemap. Added buyer evaluation content and resource links for healthcare integration engine and HL7/FHIR searches, including US buyer context without unsupported location or certification claims.
 
-Hosted navigation uses directory routes such as /product/, /ai/, /sandbox/, /hl7-fhir-integration/ and /healthcare-integration-engine/. Each directory retains index.html so GitHub Pages serves it automatically. Queries and anchors are preserved. Legacy redirects use the clean route online. Opening the extracted site through file:// restores explicit index.html links at runtime for local browsing. Direct visits to a hosted index.html normalize the address using history.replaceState. No hosting deployment was performed.
+After publishing, verify the domain in Google Search Console, submit https://linkiir.com/sitemap.xml and inspect the key landing pages. Track impressions and clicks by US country and target query, and use approved customer case studies and relevant industry links to develop evidence and authority. No search rankings, Search Console setup or rich-result eligibility are guaranteed. This update has not been deployed.
+
+## Mobile layer-animation repair
+
+Changed the Inside Linkiir Grid animation panel to natural-height rows on mobile, separating the canvas, layer controls and footnote. Compact canvas planes have more vertical separation and all labels are painted after the geometry on opaque backgrounds. Mobile layer selection shows the matching description without scroll-observer overrides; desktop retains the scroll-driven journey. Visual browser verification remains unavailable.
