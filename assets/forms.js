@@ -20,6 +20,7 @@
     var status = form.querySelector('[data-form-status]');
     var button = form.querySelector('button[type="submit"]');
     var label  = button ? button.innerHTML : '';
+    var submitting = false;
 
     function say(kind, msg) {
       if (!status) return;
@@ -32,6 +33,9 @@
       // let the browser do a normal POST if the fields aren't valid yet
       if (!form.checkValidity()) return;
       e.preventDefault();
+      // Ignore repeated submit events while this request is awaiting confirmation.
+      if (submitting) return;
+      submitting = true;
 
       if (button) { button.disabled = true; button.innerHTML = 'Sending…'; }
       if (status) { status.hidden = true; }
@@ -50,7 +54,7 @@
             say('ok', form.hasAttribute('data-sandbox-request') ? '<strong>Your sandbox request has been received.</strong> Linkiir will follow up with access and setup details. Your sandbox has not been provisioned by this form.' : '<strong>Thank you, that reached us.</strong> The Linkiir team will follow up using the contact details you provided.');
             if (typeof window.gtag === 'function') {
               window.gtag('event', 'conversion', {
-                send_to: 'AW-18360438570/2asFCJit--McEKqe-LJE',
+                send_to: 'AW-18360438570/2asFCUit--McEKqe-LJE',
                 value: 1.0,
                 currency: 'CAD'
               });
@@ -63,6 +67,7 @@
           say('err', 'We could not confirm your submission. Please try again or email <a href="mailto:sales@linkiir.com">sales@linkiir.com</a>.');
         })
         .then(function () {
+          submitting = false;
           if (button) { button.disabled = false; button.innerHTML = label; }
         });
     });
