@@ -1,0 +1,23 @@
+# Linkiir
+
+> Linkiir builds Linkiir Grid, a healthcare integration engine for hospitals, health systems, and healthcare technology vendors.
+
+## Linkiir Grid
+
+- Grid connects, transforms, and routes HL7 v2, FHIR R4 and R5, X12, XML, APIs, and files. Teams can build workflows visually and use Lua for advanced customization.
+- Deploy Linkiir Grid on your own infrastructure using Kubernetes, a single VM, or multiple VMs.
+- High availability with automatic failover, durable queues, message archives, and replay help teams keep integrations running and recover failed messages.
+- The optional AI Assistant helps build, diagnose, and fix integrations. It follows the signed-in user's permissions, and users review proposed changes and approve commits before deployment.
+- Linkiir reports 1,000+ interfaces running today.
+- Grid supports migration from Iguana, Mirth Connect, Rhapsody, Cloverleaf, and other engines. Teams can validate the output before switching routes.
+- Grid licensing includes the engine, dashboard, Schema Builder, APIs, archives, scripting, high availability, and migration tooling. AI Assistant access requires an AI-enabled licence and administrator setup.
+
+## Key pages
+
+- [Linkiir Grid](https://linkiir.com/product/): Product features, deployment, migration, and licensing.
+- [Healthcare integration engine](https://linkiir.com/healthcare-integration-engine/): Evaluation criteria for hospitals and healthcare vendors.
+- [HL7 and FHIR integration](https://linkiir.com/hl7-fhir-integration/): HL7 v2 and FHIR workflows.
+- [Integrations](https://linkiir.com/integrations/): Grid's adapter catalogue.
+- [Documentation](https://help.linkiir.com/): Grid technical documentation.
+- [15-day sandbox](https://linkiir.com/sandbox/): Request access to evaluate Grid.
+- [Contact Linkiir](https://linkiir.com/contact/): Reach the team at sales@linkiir.com.
